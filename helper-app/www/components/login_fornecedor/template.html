@@ -1,0 +1,29 @@
+<ion-view >
+
+    <ion-content>
+        <form>
+            <h2>LOGIN</h2>
+            <div>  
+            <ion-list id="list">
+                <label>
+                    <img src="img/email.png" class="d"></img> 
+                    <input placeholder="E-mail" ng-model="data.email" class="email log-input"> 
+                </label>
+                <br><br> 
+                <label>
+                    <img src="img/senha.png" class="sen"></img> 
+                    <input class="log-input" placeholder="Senha" ng-model="data.senha" style="-webkit-text-security:disc">
+                </label>
+                <br><br>
+                <a ng-click="" class="esq">Esqueceu senha?</a>
+                
+                <button class="enter" ng-click="login()">ENTRAR</button>
+                <br><br>
+                <a ng-click="goLogin()" class="ent_cliente">Deseja entrar como cliente?</a>
+                <br><br>
+                <a ng-click="goCad()"><h2 class="cad">CADASTRAR-SE</h2></a>
+            </ion-list>
+            </div>    
+        </form>
+    </ion-content>
+</ion-view>

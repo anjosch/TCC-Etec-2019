@@ -1,0 +1,49 @@
+<ion-view>
+    <ion-content>
+        <h2>Solicitar Manutenção</h2>
+        <br>
+        <form> 
+            <ion-list>
+                    
+                <img style="    width: 30%;
+                text-align: center;
+                vertical-align: baseline;
+                left: 33%;
+                position: relative;" src="{{icone}}">
+                <br><br>
+                <label>
+                    <span >Descrição do defeito</span>
+                    <input class="blue-inp" type="text" ng-model="data.descricao" placeholder="">
+                </label>
+                <br><br>
+                <label>
+                    <span >Marca</span>
+                    <input class="blue-inp" type="text" ng-model="data.marca" placeholder="">
+                </label>
+                <br><br>
+                <label>
+                        <span>Modelo</span>
+                        <br>
+                        <input class="blue-inp" type="text" ng-model="data.tipo" placeholder="">
+                    </label>
+                    <br><br>
+                        <span>Prazo Requerido (em dias)</span>
+                        <input class="blue-inp" type="tel" ng-model="data.prazo" placeholder="">
+                        </label>
+                        <br><br>
+                    
+                        <span>Garantia</span>
+                        <div id="check">
+                        <input class="checkmark" type="radio" ng-model="data.garantia" name="garantia" value="S"> Sim</input>
+                        <input class="checkmark" type="radio" ng-model="data.garantia" name="garantia" value="N"> Não</input>
+                        </div>
+                    
+                    <br>
+                <label>
+                <button class="envia" ng-click="send()">ENVIAR</button>
+                <br><br>
+               
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

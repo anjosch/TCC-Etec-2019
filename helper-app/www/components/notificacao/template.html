@@ -1,0 +1,21 @@
+<ion-view>
+  <ion-content>
+    <div id="grays">
+      <h2>Notificações</h2>
+      <br>
+      <div  ng-repeat="s in data.servicos">
+          <div id="{{s.status}}">  
+              <div>
+                  <img style="width: 16%; position: absolute; margin-left: 4%; margin-top: 5%;" src="{{s.servico.icone}}">
+                  <h2 class="hist2">Nº Protocolo:<b> {{s.idOs}}</b></h2>
+                  <h2 class="hist2">Data Abertura:<b> {{s.insercao | date: "shortDate"}}</b></h2>
+                  <h2 ng-if="data.userType == 'C'" class="hist2">Fornecedor:<b> {{s.fornecedor.nome}}</b></h2>
+                  <h2 ng-if="data.userType == 'F'" class="hist2">Cliente:<b> {{s.cliente.nome}}</b></h2>
+                  <h2 class="hist2"><b>{{s.statusFinal}}</b></h2>
+              </div>
+          </div>
+          <br>
+        </div>
+    </div>
+  </ion-content>
+</ion-view> 

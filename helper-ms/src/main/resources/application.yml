@@ -1,0 +1,17 @@
+server:  
+  port: ${PORT:3130}
+spring:
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+      adjust-dates-to-context-time-zone: false
+    serialization:
+      write-dates-as-timestamps: false
+    time-zone: America/Sao_Paulo
+  datasource:
+    url: jdbc:mysql://localhost:3306/helper
+    username: root
+    password: 
+    tomcat:
+      max-active: 1
+      max-idle: 1

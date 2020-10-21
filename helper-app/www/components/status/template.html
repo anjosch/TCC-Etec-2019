@@ -1,0 +1,45 @@
+<ion-view>
+    <ion-content>
+        <div>
+            <h2>Status de Serviço</h2>
+            <br>
+            <div ng-repeat="s in data.servicos">
+                <div id="{{s.status}}">  
+                    <h1 class="hist"><b>{{s.statusDetail}}</b>
+                        <a ng-click="verDetalhe(s.idOs)">
+                            <i class="ion-android-add-circle icon-status" ng-if="!s.visible" ></i>
+                            <i class="ion-minus-circled icon-status" ng-if="s.visible"></i>
+                        </a>
+                    </h1>                    
+                    <div>
+                        <img style="width: 16%; position: absolute; margin-left: 4%" src="{{s.servico.icone}}">
+                        <h2 class="hist2">Nº Protocolo:<b> {{s.idOs}}</b></h2>
+                        <h2 class="hist2">Data Abertura:<b> {{s.insercao | date: "shortDate"}}</b></h2>
+                        <h2 class="hist2">Categoria:<b> {{s.servico.nome}}</b></h2>
+                        <h2 ng-if="data.userType == 'C'" class="hist2">Fornecedor:<b> {{s.fornecedor.nome}}</b></h2>
+                        <h2 ng-if="data.userType == 'F'" class="hist2">Cliente:<b> {{s.cliente.nome}}</b></h2>
+                    </div>
+                    <div ng-if="s.visible">
+                        <h1>
+                            Marca: {{s.marca}}
+                        </h1>
+                        <h1>
+                            Modelo: {{s.tipo}}
+                        </h1>
+                        <h1>
+                            Prazo (Em dias): {{s.prazo}}
+                        </h1>
+                        <h1>
+                            Garantia: {{s.garantiaDesc}}
+                        </h1>
+                        <a ng-if="data.userType == 'C'" ng-click="cancelar(s.idOs)"><i class="ion-close-circled icon-status icon-status-os" ></i></a>
+                        <a ng-if="data.userType == 'F' && s.status == 'P'" ng-click="aceitar(s, s.idOs)"><i class="ion-checkmark-circled icon-status icon-status-os" style="padding-right: 10%;" ></i></a>
+                        <a ng-if="data.userType == 'F' && s.status == 'P'" ng-click="recusar(s, s.idOs)"><i class="ion-close-circled icon-status icon-status-os" ></i></a>
+                        <a ng-if="data.userType == 'C' && s.status == 'A'" ng-click="finalizar(s, s.idOs)"><i class="ion-checkmark-circled icon-status icon-status-os" style="padding-right: 10%;" ></i></a>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </ion-content>
+</ion-view> 

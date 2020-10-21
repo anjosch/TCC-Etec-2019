@@ -1,0 +1,17 @@
+<div class="bar bar-header" id="top-blue">
+  <h2 class="home-search-text">Por qual serviço de manutenção deseja buscar?</h2>
+</div>
+<div class="bar home-search input-icons">
+    <i class="ion-ios-search-strong" style="color: white"></i> 
+    <input placeholder="Busca" type="text" class="input-field" ng-model="data.searchFilter" ng-change="filter()" >    
+</div>
+<ion-view style="margin-top: 59%!important">
+  <ion-content>
+    <div id="gray">
+      <div ng-repeat="m in data.menuFilter" id="holder">
+          <a ng-click="goServico(m.nome, m.idServico, m.icone)"><img src="{{m.icone}}" class="img-home"></a>
+      </div>
+    </div>
+  
+  </ion-content>
+</ion-view> 

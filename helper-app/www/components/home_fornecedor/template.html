@@ -1,0 +1,31 @@
+<ion-view >
+
+    <ion-content>
+        <form>
+            <h2>Meus Serviços</h2>
+            <br>
+            <div ng-repeat="s in data.servicos">
+              <div id="myservices">
+                <img src="{{s.icone}}" class="img-home2">
+                <a ng-click="excluirServico(s.idServico)"><i class="ion-ios-close" style="font-size: 25pt; margin-left: 9%;"></i></a>
+              </div>
+              <br>
+            </div>
+            
+              <br>
+              <div id="add" ng-click="newServico()">+</div>
+              <div ng-if="new" ng-repeat="s in servicos" id="holder">
+                  <a ng-click="addServ(s.nome, s.idServico, s.icone)"><img src="{{s.icone}}" class="img-home"></a>
+              </div>
+              <!--<div ng-if="new">
+                  
+                  <select class="est" ng-options="option as option.nome for option in servicos" ng-model="data.servico"> 
+                  </select>
+                  <button ng-click="addServico()" class="menu-button">Salvar</button>
+              </div>-->
+              
+              </ion-list>
+            </div>    
+        </form>
+    </ion-content>
+</ion-view>

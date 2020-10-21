@@ -1,0 +1,77 @@
+{"properties": [
+  {
+    "name": "cmsio.rabbitmq.queue-name",
+    "type": "java.lang.String",
+    "description": "cmsio queue name"
+  },
+  {
+    "name": "cmsio.email.host",
+    "type": "java.lang.String",
+    "description": "SMTP host"
+  },
+  {
+    "name": "cmsio.email.port",
+    "type": "java.lang.String",
+    "description": "SMTP port"
+  },
+  {
+    "name": "cmsio.email.user",
+    "type": "java.lang.String",
+    "description": "SMTP user"
+  },
+  {
+    "name": "cmsio.email.pass",
+    "type": "java.lang.String",
+    "description": "SMTP password"
+  },
+  {
+    "name": "cmsio.database.jdbc.defaultName",
+    "type": "java.lang.String",
+    "description": "Default connection name (Just a alias for the connection). ex: cmsio"
+  },
+  {
+    "name": "cmsio.database.jdbc.url",
+    "type": "java.lang.String",
+    "description": "Database url. ex: jdbc:oracle:thin:@<IP>:1521:<SID>"
+  },
+  {
+    "name": "cmsio.database.jdbc.driverClassName",
+    "type": "java.lang.String",
+    "description": "Driver class name for JDBC connection. Default: oracle.jdbc.driver.OracleDriver"
+  },
+  {
+    "name": "cmsio.database.jdbc.user",
+    "type": "java.lang.String",
+    "description": "A user from database. It's optional."
+  },
+  {
+    "name": "cmsio.database.jdbc.password",
+    "type": "java.lang.String",
+    "description": "A text plain password or an encoded password from database. It's optional."
+  },
+  {
+    "name": "cmsio.database.jdbc.security.encoded",
+    "type": "java.lang.Boolean",
+    "description": "Encoded password enabled. It's optional. Default: true"
+  },
+  {
+    "name": "cmsio.database.jdbc.security.secureRandom",
+    "type": "java.lang.Boolean",
+    "description": "Secure random encoder enabled. It's optional. Default: true"
+  },
+  {
+    "name": "cmsio.database.jdbc.security.strength",
+    "type": "java.lang.Integer",
+    "description": "Strength security value. It's optional. Default: 10"
+  },
+  {
+    "name": "cmsio.database.jdbc.autoCommit",
+    "type": "java.lang.Boolean",
+    "description": "Auto commit configuration. Default: false"
+  },
+  {
+    "name": "cmsio.downtime",
+    "type": "java.lang.String",
+    "description": "cmsio downtime cron schedule"
+  }
+]}

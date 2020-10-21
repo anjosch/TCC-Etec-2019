@@ -1,0 +1,23 @@
+<ion-view>
+    <ion-content>
+        
+        <button class="back" ng-click="voltar()"><</button>
+        <br>
+        <h4>Como deseja se cadastrar?</h4>
+        <br>
+        <form>
+            <ion-list>
+            <p class="escolha">Escolha de que forma deseja</p>
+            <p class="escolhadois">utilizar o Helper:</p><br>
+            <br>
+            <div id="check">
+            <input class="checkmark" type="radio" name="tipo" ng-model="data.tipo" value="cliente">  Cliente<br><br>
+            <br>
+            <input class="checkmarktwo" type="radio" name="tipo" ng-model="data.tipo" value="fornecedor">  Fornecedor<br>
+            </div>
+            <br><br><br>
+            <button class="cad-cliente" ng-click="send()">CONFIRMAR</button>
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,72 @@
+<ion-view>
+        <ion-content>
+            <h2>CADASTRO</h2>
+            <br>
+            <form>
+                <ion-list>
+                    <label>
+                        <span >Nome Completo</span>
+                        <input class="blue-inp" type="text" ng-model="data.nome" placeholder="">
+                    </label>
+                    <br>
+                    <label >
+                        <span >CEP</span>
+                        <input class="blue-inp" type="tel" ng-model="data.cep" placeholder="">
+                    </label>
+                    <br>
+                    <div>
+                        <span >Estado</span>
+                        <br>
+                        <br>
+                        <select class="est" ng-options="option as option.estado for option in estados" ng-model="data.estado" ng-change="getCidades()"> 
+                        </select>
+                    </div>
+                    <div id="city">
+                        <span >Cidade</span>
+                        <br><br>
+                        <select class="est cit" ng-options="option as option.cidade for option in cidades" ng-model="data.cidade" >
+                        </select>
+                    </div>
+                    <br>
+                    <label >
+                            <span >Endereço</span>
+                            <br>
+                            <input class="blue-inp" type="text" ng-model="data.endereco" placeholder="">
+                        </label>
+                        <br>
+                        <label >
+                            <span >Complemento</span>
+                            <input class="blue-inp" type="tel" ng-model="data.compl" placeholder="">
+                        </label>
+                        <br>
+                        <label >
+                                <span >CPF</span>
+                                <input class="blue-inp" type="tel" ng-model="data.cpf" placeholder="">
+                            </label>
+                            <br>
+                    <label >
+                            <span>Email</span>
+                            <input class="blue-inp" type="text" ng-model="data.email" placeholder="">
+                        </label>
+                        <br>
+                    <label >
+                        <span >Senha</span>
+                        <input class="blue-inp" type="password" ng-model="data.pass" placeholder="">
+                    </label>
+                    <br>
+                    <label >
+                        <span >Celular</span>
+                        <input class="blue-inp" type="tel" ng-model="data.cel" placeholder="">
+                    </label>
+                    <br>
+                    <label >
+                        <span id="passar_mouse">Palavra secreta<div id="mostrar">Resposta para possível esquecimento de senha</div></span>
+                        <input class="blue-inp" type="text" ng-model="data.resposta" placeholder="">
+                    </label>
+                    <button class="cad-cliente" ng-click="send()">CADASTRAR</button>
+                    <br><br>
+                    <p class="j">Já possui cadastro?<a class="log-blue" ng-click="goLoginFornecedor()"> Login</a></p>
+                </ion-list>
+            </form>
+        </ion-content>
+    </ion-view>

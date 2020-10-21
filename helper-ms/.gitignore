@@ -1,0 +1,8 @@
+/.apt_generated/
+/.settings/
+/log/
+/target/
+.project
+.classpath
+.jazzignore
+/.apt_generated_tests/
