@@ -1,0 +1,7 @@
+Helper MS
+
+Serviço Java (versão 1.8) feito com SpringBoot
+Este serviço possui as APIs para gravação / busca dos dados na tabela do sistema.
+
+Acesso as APIs:
+http://<url>:3130/
