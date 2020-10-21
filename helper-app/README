@@ -1,0 +1,18 @@
+Helper APP
+
+Aplicativo escrito em Ionic 1 com AngularJS 
+
+
+Ionic1 - framework hibrido para construção de aplicativos (ios e android)
+AngularJS - framework javascript para construção de aplicações
+            as aplicações angularJS tem o conceito de SPA (single page application), ou seja, 
+			são mais leves porque as pagínas descem na subida da aplicação apenas.
+			
+			
+Para instalação, baixar o pacote e executar o comando abaixo:
+npm install 
+
+Pré-requisitos:
+ NodeJS : v12.16.3
+ npm    : 6.14.4
+ Ionic CLI : 5.2.5
